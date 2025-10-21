@@ -13,7 +13,7 @@ module Rails
         yaml = Pathname.new(path) if path
 
         config = if yaml && yaml.exist?
-          YAML.load(ERB.new(yaml.read).result) || {}
+          YAML.load(ERB.new(yaml.read).result, aliases: true) || {}
         else
           raise "No such file - #{path}"
         end
