@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require 'version'
+require 'date'
 
 Gem::Specification.new do |spec|
   spec.name        = 'rails_configurations'
